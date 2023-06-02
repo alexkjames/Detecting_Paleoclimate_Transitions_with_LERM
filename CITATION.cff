@@ -1,11 +1,11 @@
-cff-version: 0.1.0
+cff-version: 0.2.0
 message: "If you use this software, please cite it as below."
 authors:
   - family-names: "James"
     given-names: "Alexander"
     orcid: "https://orcid.org/0000-0001-8561-3188"
 title: "Detecting Paleoclimate Transitions with LERM - Jupyter Notebooks"
-version: v0.1.0
+version: v0.2.0
 doi: https://doi.org/10.5281/zenodo.7949355
 date-released: 2023-05-18
 url: "https://github.com/alexkjames/Detecting_Paleoclimate_Transitions_with_LERM"
