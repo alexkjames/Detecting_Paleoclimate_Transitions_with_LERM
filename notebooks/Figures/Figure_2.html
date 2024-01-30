@@ -1,0 +1,866 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Figure 2 &#8212; Detecting paleoclimate transitions with Laplacian Eigenmaps of Recurrence Matrices (LERM)</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/Figures/Figure_2';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Figure 3" href="Figure_3.html" />
+    <link rel="prev" title="Figure 1" href="Figure_1.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.png" class="logo__image only-light" alt="Detecting paleoclimate transitions with Laplacian Eigenmaps of Recurrence Matrices (LERM) - Home"/>
+    <script>document.write(`<img src="../../_static/logo.png" class="logo__image only-dark" alt="Detecting paleoclimate transitions with Laplacian Eigenmaps of Recurrence Matrices (LERM) - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    Detecting Paleoclimate Transitions with Laplacian Eigenmaps for Recurrence Matrices (LERM)
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Figure_1.html">Figure 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Figure 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Figure_3.html">Figure 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Figure_4.html">Figure 4</a></li>
+
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="Figure_5.html">Figure 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Figure_6.html">Figure 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Figure_7.html">Figure 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Figure_8.html">Figure 8</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../Extras/Holocene_Ice_Analysis.html">Holocene Ice Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Extras/Holocene_Ice_Window_Increment.html">Holocene Ice Window Increment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Extras/Holocene_Ice_Window_Size.html">Holocene Ice Window Size</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Extras/MPT_Core_Length_Comparison.html">MPT Core Length Comparison</a></li>
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/alexkjames/Detecting_Paleoclimate_Transitions_with_LERM" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/alexkjames/Detecting_Paleoclimate_Transitions_with_LERM/issues/new?title=Issue%20on%20page%20%2Fnotebooks/Figures/Figure_2.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/Figures/Figure_2.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Figure 2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="figure-2">
+<h1>Figure 2<a class="headerlink" href="#figure-2" title="Permalink to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyleoclim</span> <span class="k">as</span> <span class="nn">pyleo</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">gridspec</span>
+<span class="kn">import</span> <span class="nn">matplotlib.transforms</span> <span class="k">as</span> <span class="nn">transforms</span>
+<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">ammonyte</span> <span class="k">as</span> <span class="nn">amt</span>
+<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pyleoclim</span> <span class="k">as</span> <span class="nn">pyleo</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">gridspec</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pyleoclim&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#We suppress warnings for these notebooks for presentation purposes. Best practice is to not do this though.</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Defining group lists for easy loading</span>
+<span class="n">group_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ODP 925&#39;</span><span class="p">,</span><span class="s1">&#39;ODP 927&#39;</span><span class="p">,</span><span class="s1">&#39;ODP 929&#39;</span><span class="p">,</span><span class="s1">&#39;ODP 846&#39;</span><span class="p">,</span><span class="s1">&#39;ODP 849&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Loading time series from <a class="reference external" href="https://lorraine-lisiecki.com/LR04cores.zip">LR04 stack data</a>. The webpage with the data can be found <a class="reference external" href="https://lorraine-lisiecki.com/stack.html">here</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">series_list</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">color_list</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;colorblind&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">group_names</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/LR04cores_spec_corr/&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">+</span><span class="s1">&#39;_LR04age.txt&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="n">lines</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+        <span class="n">time</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">d18O</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
+            <span class="n">line_time</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">1</span><span class="p">]),</span><span class="s1">&#39;10f&#39;</span><span class="p">))</span>
+            <span class="n">line_d18O</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">format</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()[</span><span class="mi">2</span><span class="p">]),</span><span class="s1">&#39;10f&#39;</span><span class="p">))</span>
+            <span class="c1">#There is a discontinuity in 927 around 4000 ka, we&#39;ll just exclude it</span>
+            <span class="k">if</span> <span class="n">line_time</span> <span class="o">&lt;=</span> <span class="mi">4000</span><span class="p">:</span>
+                <span class="n">time</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line_time</span><span class="p">)</span>
+                <span class="n">d18O</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line_d18O</span><span class="p">)</span>
+        <span class="n">series</span> <span class="o">=</span> <span class="n">pyleo</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="n">d18O</span><span class="p">,</span>
+                              <span class="n">time</span><span class="o">=</span><span class="n">time</span><span class="p">,</span>
+                              <span class="n">label</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+                              <span class="n">time_name</span><span class="o">=</span><span class="s1">&#39;Yr&#39;</span><span class="p">,</span>
+                              <span class="n">time_unit</span><span class="o">=</span><span class="s1">&#39;ka&#39;</span><span class="p">,</span>
+                              <span class="n">value_name</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$\delta^</span><span class="si">{18}</span><span class="s1">O$&#39;</span><span class="p">,</span>
+                              <span class="n">value_unit</span><span class="o">=</span><span class="s1">&#39;permil&#39;</span><span class="p">)</span>
+    <span class="n">series_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+    
+<span class="n">max_time</span> <span class="o">=</span> <span class="nb">min</span><span class="p">([</span><span class="nb">max</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">time</span><span class="p">)</span> <span class="k">for</span> <span class="n">series</span> <span class="ow">in</span> <span class="n">series_list</span><span class="p">])</span>
+<span class="n">min_time</span> <span class="o">=</span> <span class="nb">max</span><span class="p">([</span><span class="nb">min</span><span class="p">(</span><span class="n">series</span><span class="o">.</span><span class="n">time</span><span class="p">)</span> <span class="k">for</span> <span class="n">series</span> <span class="ow">in</span> <span class="n">series_list</span><span class="p">])</span>
+
+<span class="n">ms</span> <span class="o">=</span> <span class="n">pyleo</span><span class="o">.</span><span class="n">MultipleSeries</span><span class="p">([</span><span class="n">series</span><span class="o">.</span><span class="n">slice</span><span class="p">((</span><span class="n">min_time</span><span class="p">,</span><span class="n">max_time</span><span class="p">))</span><span class="o">.</span><span class="n">interp</span><span class="p">()</span> <span class="k">for</span> <span class="n">series</span> <span class="ow">in</span> <span class="n">series_list</span><span class="p">])</span>
+<span class="n">fig</span><span class="p">,</span><span class="n">ax</span> <span class="o">=</span> <span class="n">ms</span><span class="o">.</span><span class="n">stackplot</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="n">color_list</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">ms</span><span class="o">.</span><span class="n">series_list</span><span class="p">)],</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_849/4038038886.py:16: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  series = pyleo.Series(value=d18O,
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
+Time axis values sorted in ascending order
+Time axis values sorted in ascending order
+Time axis values sorted in ascending order
+Time axis values sorted in ascending order
+</pre></div>
+</div>
+<img alt="../../_images/d3f2713f92fdb2086b48b38b978b7153ce6651d1eb323c2f86a3bfc05a9d5b59.png" src="../../_images/d3f2713f92fdb2086b48b38b978b7153ce6651d1eb323c2f86a3bfc05a9d5b59.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">detect_transitions</span><span class="p">(</span><span class="n">series</span><span class="p">,</span><span class="n">transition_interval</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Function to detect transitions across a confidence interval</span>
+<span class="sd">    </span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    </span>
+<span class="sd">    series : pyleo.Series, amt.Series</span>
+<span class="sd">        Series to detect transitions upon</span>
+<span class="sd">        </span>
+<span class="sd">    transition_interval : list,tuple</span>
+<span class="sd">        Upper and lower bound for the transition interval</span>
+<span class="sd">    </span>
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    </span>
+<span class="sd">    transitions : list</span>
+<span class="sd">        Timing of the transitions of the series across its confidence interval</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">series_fine</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">interp</span><span class="p">(</span><span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">transition_interval</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">upper</span><span class="p">,</span> <span class="n">lower</span> <span class="o">=</span> <span class="n">amt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">sampling</span><span class="o">.</span><span class="n">confidence_interval</span><span class="p">(</span><span class="n">series</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">upper</span><span class="p">,</span> <span class="n">lower</span> <span class="o">=</span> <span class="n">transition_interval</span>
+
+    <span class="n">above_thresh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">series_fine</span><span class="o">.</span><span class="n">value</span> <span class="o">&gt;</span> <span class="n">upper</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">below_thresh</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">series_fine</span><span class="o">.</span><span class="n">value</span> <span class="o">&lt;</span> <span class="n">lower</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">transition_above</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">above_thresh</span><span class="p">)</span>
+    <span class="n">transition_below</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">below_thresh</span><span class="p">)</span>
+
+    <span class="n">upper_trans</span> <span class="o">=</span> <span class="n">series_fine</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="mi">1</span><span class="p">:][</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">above_thresh</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">lower_trans</span> <span class="o">=</span> <span class="n">series_fine</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="mi">1</span><span class="p">:][</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">below_thresh</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+
+    <span class="n">full_trans</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">transition_above</span><span class="p">))</span>
+
+    <span class="n">last_above</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">last_below</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">transition_above</span><span class="p">)):</span>
+        <span class="n">above</span> <span class="o">=</span> <span class="n">transition_above</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">below</span> <span class="o">=</span> <span class="n">transition_below</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">above</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">last_below</span><span class="o">+</span><span class="n">above</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">loc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">below_pointer</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">full_trans</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">last_below</span><span class="o">=</span><span class="mi">0</span>
+            <span class="n">last_above</span> <span class="o">=</span> <span class="n">above</span>
+            <span class="n">above_pointer</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">if</span> <span class="n">below</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">last_above</span> <span class="o">+</span> <span class="n">below</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">loc</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">i</span><span class="o">+</span><span class="n">above_pointer</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+                <span class="n">full_trans</span><span class="p">[</span><span class="n">loc</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+                <span class="n">last_above</span><span class="o">=</span><span class="mi">0</span>
+            <span class="n">last_below</span> <span class="o">=</span> <span class="n">below</span>
+            <span class="n">below_pointer</span> <span class="o">=</span> <span class="n">i</span>
+
+    <span class="n">transitions</span> <span class="o">=</span> <span class="n">series_fine</span><span class="o">.</span><span class="n">time</span><span class="p">[</span><span class="mi">1</span><span class="p">:][</span><span class="n">full_trans</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">]</span>
+    
+    <span class="k">return</span> <span class="n">transitions</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Carrying out LERM analysis</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lp_rm</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="n">lp_fi</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="n">m</span> <span class="o">=</span> <span class="mi">13</span> <span class="c1"># Embedding dimension</span>
+
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span><span class="n">series</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">ms</span><span class="o">.</span><span class="n">common_time</span><span class="p">()</span><span class="o">.</span><span class="n">series_list</span><span class="p">):</span>
+    <span class="n">series</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">convert_time_unit</span><span class="p">(</span><span class="s1">&#39;Years&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">interp</span><span class="p">()</span><span class="o">.</span><span class="n">detrend</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;savitzky-golay&#39;</span><span class="p">)</span>
+    <span class="n">amt_series</span> <span class="o">=</span> <span class="n">amt</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+        <span class="n">time</span><span class="o">=</span><span class="n">series</span><span class="o">.</span><span class="n">time</span><span class="p">,</span>
+        <span class="n">value</span><span class="o">=</span><span class="n">series</span><span class="o">.</span><span class="n">value</span><span class="p">,</span>
+        <span class="n">time_name</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">time_name</span><span class="p">,</span>
+        <span class="n">value_name</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">value_name</span><span class="p">,</span>
+        <span class="n">time_unit</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">time_unit</span><span class="p">,</span>
+        <span class="n">value_unit</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">value_unit</span><span class="p">,</span>
+        <span class="n">label</span> <span class="o">=</span> <span class="n">series</span><span class="o">.</span><span class="n">label</span><span class="p">,</span>
+        <span class="n">clean_ts</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+        <span class="n">sort_ts</span><span class="o">=</span><span class="kc">None</span>
+    <span class="p">)</span>
+    <span class="n">td</span> <span class="o">=</span> <span class="n">amt_series</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="n">m</span><span class="o">=</span><span class="n">m</span><span class="p">)</span> <span class="c1"># Tau is selected according to first minimum of mutual information</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">series</span><span class="o">.</span><span class="n">label</span><span class="si">}</span><span class="s1"> tau is : </span><span class="si">{</span><span class="n">td</span><span class="o">.</span><span class="n">tau</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+    <span class="n">eps</span> <span class="o">=</span> <span class="n">td</span><span class="o">.</span><span class="n">find_epsilon</span><span class="p">(</span><span class="n">eps</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="n">target_density</span><span class="o">=</span><span class="mf">.05</span><span class="p">,</span><span class="n">tolerance</span><span class="o">=</span><span class="mf">.01</span><span class="p">)</span> <span class="c1"># Find epsilon value that gives us recurrence density of 5% (1 is the starting value we use for epsilon as a first guess)</span>
+    <span class="n">rm</span> <span class="o">=</span> <span class="n">eps</span><span class="p">[</span><span class="s1">&#39;Output&#39;</span><span class="p">]</span>
+    <span class="n">lp_series</span> <span class="o">=</span> <span class="n">rm</span><span class="o">.</span><span class="n">laplacian_eigenmaps</span><span class="p">(</span><span class="n">w_size</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span><span class="n">w_incre</span> <span class="o">=</span> <span class="mi">5</span><span class="p">)</span> <span class="c1"># Window size = 50, window increment = 5</span>
+    <span class="n">lp_series</span> <span class="o">=</span> <span class="n">lp_series</span><span class="o">.</span><span class="n">convert_time_unit</span><span class="p">(</span><span class="s1">&#39;ka&#39;</span><span class="p">)</span>
+    <span class="n">lp_fi</span><span class="p">[</span><span class="n">series</span><span class="o">.</span><span class="n">label</span><span class="p">]</span> <span class="o">=</span> <span class="n">lp_series</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_849/1277079953.py:8: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  amt_series = amt.Series(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 925 tau is : 6
+Initial density is 0.0230
+Initial density is not within the tolerance window, searching...
+Epsilon: 1.0000, Density: 0.0230
+Epsilon: 1.1348, Density: 0.0535
+Epsilon: 1.1348, Density: 0.0535.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
+  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_849/1277079953.py:8: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  amt_series = amt.Series(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 927 tau is : 4
+Initial density is 0.0347
+Initial density is not within the tolerance window, searching...
+Epsilon: 1.0000, Density: 0.0347
+Epsilon: 1.0763, Density: 0.0535
+Epsilon: 1.0763, Density: 0.0535.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
+  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_849/1277079953.py:8: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  amt_series = amt.Series(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 929 tau is : 4
+Initial density is 0.0406
+Initial density is within the tolerance window!
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
+  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_849/1277079953.py:8: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  amt_series = amt.Series(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 846 tau is : 7
+Initial density is 0.1115
+Initial density is not within the tolerance window, searching...
+Epsilon: 0.3852, Density: 0.0014
+Epsilon: 0.8709, Density: 0.0460
+Epsilon: 0.8709, Density: 0.0460.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
+  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_849/1277079953.py:8: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  amt_series = amt.Series(
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 849 tau is : 5
+Initial density is 0.1097
+Initial density is not within the tolerance window, searching...
+Epsilon: 0.4032, Density: 0.0017
+Epsilon: 0.8860, Density: 0.0491
+Epsilon: 0.8860, Density: 0.0491.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
+  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
+  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">SMALL_SIZE</span> <span class="o">=</span> <span class="mi">16</span>
+<span class="n">MEDIUM_SIZE</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">BIGGER_SIZE</span> <span class="o">=</span> <span class="mi">25</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;font&#39;</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">)</span>          <span class="c1"># controls default text sizes</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">)</span>     <span class="c1"># fontsize of the axes title</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;axes&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">MEDIUM_SIZE</span><span class="p">)</span>    <span class="c1"># fontsize of the x and y labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;xtick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">MEDIUM_SIZE</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;ytick&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="n">MEDIUM_SIZE</span><span class="p">)</span>    <span class="c1"># fontsize of the tick labels</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;legend&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="n">SMALL_SIZE</span><span class="p">)</span>    <span class="c1"># legend fontsize</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;figure&#39;</span><span class="p">,</span> <span class="n">titlesize</span><span class="o">=</span><span class="n">BIGGER_SIZE</span><span class="p">)</span>  <span class="c1"># fontsize of the figure title</span>
+
+<span class="n">fig</span><span class="p">,</span><span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">nrows</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">group_names</span><span class="p">),</span><span class="n">ncols</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">transition_timing</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span><span class="n">site</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">group_names</span><span class="p">):</span>
+    <span class="n">ts</span> <span class="o">=</span> <span class="n">lp_fi</span><span class="p">[</span><span class="n">site</span><span class="p">]</span>
+    <span class="n">ts</span><span class="o">.</span><span class="n">label</span> <span class="o">=</span> <span class="n">lp_series</span><span class="o">.</span><span class="n">label</span>
+    <span class="n">ts</span><span class="o">.</span><span class="n">value_name</span> <span class="o">=</span> <span class="s1">&#39;FI&#39;</span>
+    <span class="n">ts</span><span class="o">.</span><span class="n">value_unit</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">ts</span><span class="o">.</span><span class="n">time_name</span> <span class="o">=</span> <span class="s1">&#39;Yr&#39;</span>
+    <span class="n">ts</span><span class="o">.</span><span class="n">time_unit</span> <span class="o">=</span> <span class="s1">&#39;ka&#39;</span>
+
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span>
+    <span class="n">ts_smooth</span> <span class="o">=</span> <span class="n">amt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">fisher</span><span class="o">.</span><span class="n">smooth_series</span><span class="p">(</span><span class="n">series</span><span class="o">=</span><span class="n">ts</span><span class="p">,</span><span class="n">block_size</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#Using a block size of 3 for smoothing the Fisher information</span>
+    <span class="n">upper</span><span class="p">,</span> <span class="n">lower</span> <span class="o">=</span> <span class="n">amt</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">sampling</span><span class="o">.</span><span class="n">confidence_interval</span><span class="p">(</span><span class="n">series</span><span class="o">=</span><span class="n">ts</span><span class="p">,</span><span class="n">upper</span><span class="o">=</span><span class="mi">95</span><span class="p">,</span><span class="n">lower</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="n">w</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span><span class="n">n_samples</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span> <span class="c1">#Calculating the bounds for our confidence interval using default values </span>
+    <span class="n">transitions</span><span class="o">=</span><span class="n">detect_transitions</span><span class="p">(</span><span class="n">ts_smooth</span><span class="p">,</span><span class="n">transition_interval</span><span class="o">=</span><span class="p">(</span><span class="n">upper</span><span class="p">,</span><span class="n">lower</span><span class="p">))</span>
+    
+    <span class="n">transition_timing</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">transitions</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="n">ts</span><span class="o">.</span><span class="n">confidence_smooth_plot</span><span class="p">(</span>
+        <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span>
+        <span class="n">background_series</span> <span class="o">=</span> <span class="n">ms</span><span class="o">.</span><span class="n">series_list</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+        <span class="n">transition_interval</span><span class="o">=</span><span class="p">(</span><span class="n">upper</span><span class="p">,</span><span class="n">lower</span><span class="p">),</span>
+        <span class="n">block_size</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+        <span class="n">color</span><span class="o">=</span><span class="n">color_list</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span>
+        <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">),</span>
+        <span class="n">legend</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">lgd_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;loc&#39;</span><span class="p">:</span><span class="s1">&#39;upper left&#39;</span><span class="p">},</span>
+        <span class="n">hline_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span><span class="kc">None</span><span class="p">},</span>
+        <span class="n">background_kwargs</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;ylabel&#39;</span><span class="p">:</span><span class="s1">&#39;$\delta^</span><span class="si">{18}</span><span class="s1">O$ [permil]&#39;</span><span class="p">,</span><span class="s1">&#39;legend&#39;</span><span class="p">:</span><span class="kc">False</span><span class="p">,</span><span class="s1">&#39;linewidth&#39;</span><span class="p">:</span><span class="mf">.8</span><span class="p">,</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span><span class="s1">&#39;alpha&#39;</span><span class="p">:</span><span class="mf">.8</span><span class="p">})</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">transition_timing</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;grey&#39;</span><span class="p">,</span><span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span><span class="n">alpha</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
+    
+    <span class="n">trans</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">blended_transform_factory</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">transAxes</span><span class="p">,</span> <span class="n">ax</span><span class="o">.</span><span class="n">transData</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">x</span><span class="o">=-</span><span class="mf">.08</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">2.5</span><span class="p">,</span> <span class="n">s</span> <span class="o">=</span> <span class="n">site</span><span class="p">,</span> <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">trans</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color_list</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+        
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;left&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[</span><span class="s1">&#39;right&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_label_position</span><span class="p">(</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">tick_left</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">get_legend</span><span class="p">()</span><span class="o">.</span><span class="n">remove</span><span class="p">()</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">visible</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">idx</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">group_names</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">spines</span><span class="p">[[</span><span class="s1">&#39;bottom&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">bottom</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">label</span><span class="o">.</span><span class="n">set_fontsize</span><span class="p">(</span><span class="mi">25</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">ticks</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/f0bc8c5bed7849655f672625db9e763b63d99de9dce44beb3262285a44da5ffa.png" src="../../_images/f0bc8c5bed7849655f672625db9e763b63d99de9dce44beb3262285a44da5ffa.png" />
+</div>
+</div>
+<p>Checking the stats of the transition timings:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">transition_timing</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>910.7573936631004
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">transition_timing</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>56.90001486147384
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/Figures"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Figure_1.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Figure 1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Figure_3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Figure 3</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Alexander James
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
