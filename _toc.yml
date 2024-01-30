@@ -3,17 +3,17 @@ root: intro
 parts:
   - caption: Figures
     chapters:
-      - file: notebooks/Figure_1
-      - file: notebooks/Figure_2
-      - file: notebooks/Figure_3
-      - file: notebooks/Figure_4
-      - file: notebooks/Figure_5
-      - file: notebooks/Figure_6
-      - file: notebooks/Figure_7
-      - file: notebooks/Figure_8
+      - file: notebooks/Figures/Figure_1
+      - file: notebooks/Figures/Figure_2
+      - file: notebooks/Figures/Figure_3
+      - file: notebooks/Figures/Figure_4
+      - file: notebooks/Figures/Figure_5
+      - file: notebooks/Figures/Figure_6
+      - file: notebooks/Figures/Figure_7
+      - file: notebooks/Figures/Figure_8
   - caption: Extras
     chapters:
-      - file: notebooks/Holocene_Ice_Analysis
-      - file: notebooks/Holocene_Ice_Window_Increment
-      - file: notebooks/Holocene_Ice_Window_Size
-      - file: notebooks/MPT_Core_Length_Comparison
+      - file: notebooks/Extras/Holocene_Ice_Analysis
+      - file: notebooks/Extras/Holocene_Ice_Window_Increment
+      - file: notebooks/Extras/Holocene_Ice_Window_Size
+      - file: notebooks/Extras/MPT_Core_Length_Comparison
