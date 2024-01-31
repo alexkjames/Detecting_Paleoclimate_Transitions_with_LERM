@@ -1,0 +1,28 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Detecting paleoclimate transitions with Laplacian Eigenmaps of Recurrence Matrices (LERM)
+author: Alexander James
+logo: logo.png
+copyright: "2023"
+only_build_toc_files: true
+execute:
+  execute_notebooks: force
+  timeout: 3600
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+repository:
+  url: https://github.com/alexkjames/Detecting_Paleoclimate_Transitions_with_LERM
+  branch: main
+
+html:
+  use_issues_button: true
+  use_repository_button: true
+  announcement: ""
+
+launch_buttons:
+  notebook_interface: "jupyterlab"
+  binderhub_url: ""
