@@ -407,20 +407,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
-<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">pangaeapy.pandataset</span> <span class="kn">import</span> <span class="n">PanDataSet</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">matplotlib.gridspec</span> <span class="kn">import</span> <span class="n">GridSpec</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pangaeapy&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -511,15 +497,11 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_2237/3890698746.py:2: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  tsb = pyleo.Series(time=dsb.data[&#39;Age&#39;], value=dsb.data[&#39;C. wuellerstorfi δ18O&#39;],
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 1000x400 with 1 Axes&gt;,
- &lt;Axes: xlabel=&#39;Age [ka BP]&#39;, ylabel=&#39;$\\delta^{18}$O x (-1) [‰]&#39;&gt;)
+ &lt;Axes: xlabel=&#39;Age [ka]&#39;, ylabel=&#39;$\\delta^{18}$O x (-1) [‰]&#39;&gt;)
 </pre></div>
 </div>
-<img alt="../../_images/da6d15a24532e40be6eb083cf1f3ef003d31f34299c4ea3c3e4b6001a5c0c4d8.png" src="../../_images/da6d15a24532e40be6eb083cf1f3ef003d31f34299c4ea3c3e4b6001a5c0c4d8.png" />
+<img alt="../../_images/70683a5fd9f22dd533feeb6fa47d7ae99adb63398c1445f9972aa3085fd226cd.png" src="../../_images/70683a5fd9f22dd533feeb6fa47d7ae99adb63398c1445f9972aa3085fd226cd.png" />
 </div>
 </div>
 <p>We carry out LERM analysis on the record binned to different resolutions (.5, 2.5, and 4.5 kyr)</p>
@@ -555,39 +537,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_2237/2503865442.py:8: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bin size 0.5 tau is: 12
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_2237/2503865442.py:8: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bin size 2.5 tau is: 5
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_2237/2503865442.py:8: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bin size 4.5 tau is: 6
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
 </pre></div>
 </div>
 </div>
@@ -681,10 +637,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x2bbd70670&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x2ab0047f0&gt;
 </pre></div>
 </div>
-<img alt="../../_images/58f7d54c536b1a47976e3674b7281c6a88ecac70a1ecae868bc9812a156f4f23.png" src="../../_images/58f7d54c536b1a47976e3674b7281c6a88ecac70a1ecae868bc9812a156f4f23.png" />
+<img alt="../../_images/4f5e9feaa79cdafd9bf690ae5ca6d8feeb745f787f3ef51c9967aaac2e2f5fee.png" src="../../_images/4f5e9feaa79cdafd9bf690ae5ca6d8feeb745f787f3ef51c9967aaac2e2f5fee.png" />
 </div>
 </div>
 </section>

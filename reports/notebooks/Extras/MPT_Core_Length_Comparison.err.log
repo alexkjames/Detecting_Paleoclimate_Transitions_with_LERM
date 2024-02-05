@@ -15,28 +15,58 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pyleoclim as pyleo
-import numpy as np
-import ammonyte as ammo
-import seaborn as sns
-import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
-import matplotlib.transforms as transforms
+#Defining group lists for easy loading
+group_names = ['ODP 925','ODP 927','ODP 929','ODP 846','ODP 849']
 
-from pangaeapy.pandataset import PanDataSet
-from matplotlib.gridspec import GridSpec
-import matplotlib.patches as mpatches
+series_list = []
+color_list = sns.color_palette('colorblind')
+
+for name in group_names:
+    with open('./data/LR04cores_spec_corr/'+name[-3:]+'_LR04age.txt','rb') as handle:
+        lines = handle.readlines()
+        time = []
+        d18O = []
+        for x in lines:
+            line_time = float(format(float(x.decode().split()[1]),'10f'))
+            line_d18O = float(format(float(x.decode().split()[2]),'10f'))
+            #There is a discontinuity in 927 around 4000 ka, we'll just exclude it
+            if line_time <= 4000:
+                time.append(line_time)
+                d18O.append(line_d18O)
+        series = pyleo.Series(value=d18O,
+                              time=time,
+                              label=name,
+                              time_name='Yr',
+                              time_unit='ka',
+                              value_name=r'$\delta^{18}O$',
+                              value_unit='permil')
+    series_list.append(series)
+    
+max_time = min([max(series.time) for series in series_list])
+min_time = max([min(series.time) for series in series_list])
+
+ms = pyleo.MultipleSeries([series.slice((min_time,max_time)).interp() for series in series_list])
+fig,ax = ms.stackplot(colors=color_list[:len(ms.series_list)],figsize=(8,10))
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[1], line 9[0m
-[1;32m      6[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpatches[39;00m [38;5;28;01mas[39;00m [38;5;21;01mmpatches[39;00m
-[1;32m      7[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mtransforms[39;00m [38;5;28;01mas[39;00m [38;5;21;01mtransforms[39;00m
-[0;32m----> 9[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpangaeapy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpandataset[39;00m [38;5;28;01mimport[39;00m PanDataSet
-[1;32m     10[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mgridspec[39;00m [38;5;28;01mimport[39;00m GridSpec
-[1;32m     11[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpatches[39;00m [38;5;28;01mas[39;00m [38;5;21;01mmpatches[39;00m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Cell [0;32mIn[4], line 8[0m
+[1;32m      5[0m color_list [38;5;241m=[39m sns[38;5;241m.[39mcolor_palette([38;5;124m'[39m[38;5;124mcolorblind[39m[38;5;124m'[39m)
+[1;32m      7[0m [38;5;28;01mfor[39;00m name [38;5;129;01min[39;00m group_names:
+[0;32m----> 8[0m     [38;5;28;01mwith[39;00m [38;5;28;43mopen[39;49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43m./data/LR04cores_spec_corr/[39;49m[38;5;124;43m'[39;49m[38;5;241;43m+[39;49m[43mname[49m[43m[[49m[38;5;241;43m-[39;49m[38;5;241;43m3[39;49m[43m:[49m[43m][49m[38;5;241;43m+[39;49m[38;5;124;43m'[39;49m[38;5;124;43m_LR04age.txt[39;49m[38;5;124;43m'[39;49m[43m,[49m[38;5;124;43m'[39;49m[38;5;124;43mrb[39;49m[38;5;124;43m'[39;49m[43m)[49m [38;5;28;01mas[39;00m handle:
+[1;32m      9[0m         lines [38;5;241m=[39m handle[38;5;241m.[39mreadlines()
+[1;32m     10[0m         time [38;5;241m=[39m []
 
-[0;31mModuleNotFoundError[0m: No module named 'pangaeapy'
+File [0;32m~/miniconda3/envs/ammonyte/lib/python3.10/site-packages/IPython/core/interactiveshell.py:310[0m, in [0;36m_modified_open[0;34m(file, *args, **kwargs)[0m
+[1;32m    303[0m [38;5;28;01mif[39;00m file [38;5;129;01min[39;00m {[38;5;241m0[39m, [38;5;241m1[39m, [38;5;241m2[39m}:
+[1;32m    304[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[1;32m    305[0m         [38;5;124mf[39m[38;5;124m"[39m[38;5;124mIPython won[39m[38;5;124m'[39m[38;5;124mt let you open fd=[39m[38;5;132;01m{[39;00mfile[38;5;132;01m}[39;00m[38;5;124m by default [39m[38;5;124m"[39m
+[1;32m    306[0m         [38;5;124m"[39m[38;5;124mas it is likely to crash IPython. If you know what you are doing, [39m[38;5;124m"[39m
+[1;32m    307[0m         [38;5;124m"[39m[38;5;124myou can use builtins[39m[38;5;124m'[39m[38;5;124m open.[39m[38;5;124m"[39m
+[1;32m    308[0m     )
+[0;32m--> 310[0m [38;5;28;01mreturn[39;00m [43mio_open[49m[43m([49m[43mfile[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwargs[49m[43m)[49m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: './data/LR04cores_spec_corr/925_LR04age.txt'
 

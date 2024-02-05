@@ -420,20 +420,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">import</span> <span class="nn">matplotlib.transforms</span> <span class="k">as</span> <span class="nn">transforms</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">pangaeapy.pandataset</span> <span class="kn">import</span> <span class="n">PanDataSet</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">matplotlib.gridspec</span> <span class="kn">import</span> <span class="n">GridSpec</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pangaeapy&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -485,12 +471,6 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/3902818010.py:2: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  tsb = pyleo.Series(time=dsb.data[&#39;Age&#39;], value=dsb.data[&#39;C. wuellerstorfi δ18O&#39;],
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/3902818010.py:10: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
 Initial density is 0.0069
 Initial density is not within the tolerance window, searching...
@@ -499,17 +479,11 @@ Epsilon: 1.6948, Density: 0.0576
 Epsilon: 1.6948, Density: 0.0576.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x2971a88e0&gt;
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x2aeccf340&gt;
-</pre></div>
-</div>
-<img alt="../../_images/8d364ab5cb9deb5dce059826fe5d725a06cbf691003888b4f8e2d574da4d043a.png" src="../../_images/8d364ab5cb9deb5dce059826fe5d725a06cbf691003888b4f8e2d574da4d043a.png" />
-<img alt="../../_images/20338bb26680a7191cad00a924a9c0cd062261bece436b3b6f582789976d471b.png" src="../../_images/20338bb26680a7191cad00a924a9c0cd062261bece436b3b6f582789976d471b.png" />
+<img alt="../../_images/2c0d31696676f5f4cc8f6374dc2c85ae426963caf4fddba7e6fd1e986338962a.png" src="../../_images/2c0d31696676f5f4cc8f6374dc2c85ae426963caf4fddba7e6fd1e986338962a.png" />
+<img alt="../../_images/b8505e3b678bcf87ace88603166fd74a432094d46cc4d5035acb6cc76453eb8b.png" src="../../_images/b8505e3b678bcf87ace88603166fd74a432094d46cc4d5035acb6cc76453eb8b.png" />
 </div>
 </div>
 </section>
@@ -553,18 +527,27 @@ Epsilon: 1.6948, Density: 0.0576.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2150843615.py:19: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  series = pyleo.Series(value=d18O,
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">color_list</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;colorblind&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">group_names</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">8</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/LR04cores_spec_corr/&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">+</span><span class="s1">&#39;_LR04age.txt&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="n">lines</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="n">time</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="nn">File ~/miniconda3/envs/ammonyte/lib/python3.10/site-packages/IPython/core/interactiveshell.py:310,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">303</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">304</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">305</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">310</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./data/LR04cores_spec_corr/925_LR04age.txt&#39;
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
-Time axis values sorted in ascending order
-Time axis values sorted in ascending order
-Time axis values sorted in ascending order
-Time axis values sorted in ascending order
-</pre></div>
-</div>
-<img alt="../../_images/d3f2713f92fdb2086b48b38b978b7153ce6651d1eb323c2f86a3bfc05a9d5b59.png" src="../../_images/d3f2713f92fdb2086b48b38b978b7153ce6651d1eb323c2f86a3bfc05a9d5b59.png" />
 </div>
 </div>
 <div class="cell docutils container">
