@@ -1,16 +1,16 @@
 format: jb-book
 root: intro
 parts:
-  - caption: Figures
+  - caption: Main Analysis
     chapters:
-      - file: notebooks/Figures/Figure_1
-      - file: notebooks/Figures/Figure_2
-      - file: notebooks/Figures/Figure_3
-      - file: notebooks/Figures/Figure_4
-      - file: notebooks/Figures/Figure_5
-      - file: notebooks/Figures/Figure_6
-      - file: notebooks/Figures/Figure_7
-      - file: notebooks/Figures/Figure_8
+      - file: notebooks/Main_Analysis/Method_Overview
+      - file: notebooks/Main_Analysis/ODP_LERM
+      - file: notebooks/Main_Analysis/Synthetic_ODP_LERM
+      - file: notebooks/Main_Analysis/Resolution_Sensitivity
+      - file: notebooks/Main_Analysis/IceCore_LERM
+      - file: notebooks/Main_Analysis/Event_Sensitivity
+      - file: notebooks/Main_Analysis/Synthetic_Ensembles
+      - file: notebooks/Main_Analysis/Resolution_Analysis
   - caption: Extras
     chapters:
       - file: notebooks/Extras/Holocene_Ice_Analysis

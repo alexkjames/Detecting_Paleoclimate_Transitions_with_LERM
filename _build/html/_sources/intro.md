@@ -1,6 +1,6 @@
 # Detecting Paleoclimate Transitions with Laplacian Eigenmaps for Recurrence Matrices (LERM)
 
-This repository contains the notebooks used to generate figures from the paper *Detecting Paleoclimate Transitions with Laplacian Eigenmaps for Recurrence Matrices (LERM)*.
+This repository contains the notebooks used to generate figures from the paper [*Detecting Paleoclimate Transitions with Laplacian Eigenmaps for Recurrence Matrices (LERM)*](https://doi.org/10.1029/2023PA004700).
 
 ## Authors
 

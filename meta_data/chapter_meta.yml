@@ -2,10 +2,10 @@ shortname: Detecting Paleoclimate Transitions with LERM
 type: Paleobook
 thumbnail: full_workflow
 parts:
-  - caption: Figures
+  - caption: Main Analysis
     chapters:
-      - shortname: Figure_1
-        filename: Figure_1
+      - shortname: Method overview
+        filename: Method_Overview
         thumbnail: full_workflow
         tags:
           domains:
@@ -14,8 +14,8 @@ parts:
             - matplotlib
             - pyleoclim
             - ammonyte
-      - shortname: Figure_2
-        filename: Figure_2
+      - shortname: LERM applied to ODP cores
+        filename: ODP_LERM
         thumbnail: odp
         tags:
           domains:
@@ -24,8 +24,8 @@ parts:
             - matplotlib
             - pyleoclim
             - ammonyte
-      - shortname: Figure_3
-        filename: Figure_3
+      - shortname: LERM applied to synthetic ODP cores
+        filename: Synthetic_ODP_LERM
         thumbnail: leloup_paillard_odp_lp
         tags:
           domains:
@@ -34,8 +34,8 @@ parts:
             - matplotlib
             - pyleoclim
             - ammonyte
-      - shortname: Figure_4
-        filename: Figure_4
+      - shortname: Sensitivity to resolution
+        filename: Resolution_Sensitivity
         thumbnail: sensitivity_1
         tags:
           domains:
@@ -44,8 +44,8 @@ parts:
             - matplotlib
             - pyleoclim
             - ammonyte
-      - shortname: Figure_5
-        filename: Figure_5
+      - shortname: LERM applied to ice cores
+        filename: IceCore_LERM
         thumbnail: ice_core
         tags:
           domains:
@@ -54,8 +54,8 @@ parts:
             - matplotlib
             - pyleoclim
             - ammonyte
-      - shortname: Figure_6
-        filename: Figure_6
+      - shortname: Sensitivity to events
+        filename: Event_Sensitivity
         thumbnail: 8k_noise
         tags:
           domains:
@@ -64,7 +64,7 @@ parts:
             - matplotlib
             - pyleoclim
             - ammonyte
-      - shortname: Figure_7
+      - shortname: Regime transition probability on synthetic ensembles
         filename: Figure_7
         thumbnail: density
         tags:
@@ -74,8 +74,8 @@ parts:
             - matplotlib
             - pyleoclim
             - ammonyte
-      - shortname: Figure_8
-        filename: Figure_8
+      - shortname: Resolution changes on real data
+        filename: Resolution_Analysis
         thumbnail: resolution
         tags:
           domains:
@@ -86,7 +86,7 @@ parts:
             - ammonyte
   - caption: Extras
     chapters:
-      - shortname: Holocene_Ice_Analysis
+      - shortname: Holocene Ice Analysis
         filename: Holocene_Ice_Analysis
         thumbnail: full_workflow
         tags:
@@ -96,7 +96,7 @@ parts:
             - matplotlib
             - pyleoclim
             - ammonyte
-      - shortname: Holocene_Ice_Window_Increment
+      - shortname: Holocene Ice Window Increment
         filename: Holocene_Ice_Window_Increment
         thumbnail: full_workflow
         tags:
@@ -106,7 +106,7 @@ parts:
             - matplotlib
             - pyleoclim
             - ammonyte
-      - shortname: Holocene_Ice_Window_Size
+      - shortname: Holocene Ice Window Size
         filename: Holocene_Ice_Window_Size
         thumbnail: full_workflow
         tags:
