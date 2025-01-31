@@ -1,0 +1,39 @@
+Traceback (most recent call last):
+  File "/Users/alexjames/miniconda3/envs/ammonyte/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/Users/alexjames/miniconda3/envs/ammonyte/lib/python3.10/site-packages/nbclient/client.py", line 1305, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/Users/alexjames/miniconda3/envs/ammonyte/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/Users/alexjames/miniconda3/envs/ammonyte/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/Users/alexjames/miniconda3/envs/ammonyte/lib/python3.10/site-packages/nbclient/client.py", line 705, in async_execute
+    await self.async_execute_cell(
+  File "/Users/alexjames/miniconda3/envs/ammonyte/lib/python3.10/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/Users/alexjames/miniconda3/envs/ammonyte/lib/python3.10/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+td = amt.TimeEmbeddedSeries(series,m=12)
+rm = td.find_epsilon(eps=1)['Output']
+print(f'Tau is : {td.tau}')
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+Cell [0;32mIn[6], line 1[0m
+[0;32m----> 1[0m td [38;5;241m=[39m [43mamt[49m[38;5;241;43m.[39;49m[43mTimeEmbeddedSeries[49m[43m([49m[43mseries[49m[43m,[49m[43mm[49m[38;5;241;43m=[39;49m[38;5;241;43m12[39;49m[43m)[49m
+[1;32m      2[0m rm [38;5;241m=[39m td[38;5;241m.[39mfind_epsilon(eps[38;5;241m=[39m[38;5;241m1[39m)[[38;5;124m'[39m[38;5;124mOutput[39m[38;5;124m'[39m]
+[1;32m      3[0m [38;5;28mprint[39m([38;5;124mf[39m[38;5;124m'[39m[38;5;124mTau is : [39m[38;5;132;01m{[39;00mtd[38;5;241m.[39mtau[38;5;132;01m}[39;00m[38;5;124m'[39m)
+
+File [0;32m~/miniconda3/envs/ammonyte/lib/python3.10/site-packages/ammonyte/core/time_embedded_series.py:77[0m, in [0;36mTimeEmbeddedSeries.__init__[0;34m(self, series, m, tau, embedded_data, embedded_time, value_name, value_unit, time_name, time_unit, label)[0m
+[1;32m     73[0m     [38;5;28mself[39m[38;5;241m.[39mtau [38;5;241m=[39m tau_search([38;5;28mself[39m[38;5;241m.[39mseries)
+[1;32m     75[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39membedded_data [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[0;32m---> 77[0m     [38;5;28;01mif[39;00m [38;5;28misinstance[39m([38;5;28mself[39m[38;5;241m.[39mseries, (pyleo[38;5;241m.[39mcore[38;5;241m.[39mSeries, [43mpyleo[49m[38;5;241;43m.[39;49m[43mcore[49m[38;5;241;43m.[39;49m[43mLipdSeries[49m)):
+[1;32m     78[0m         values [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mseries[38;5;241m.[39mvalue
+[1;32m     79[0m         time_axis [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39mseries[38;5;241m.[39mtime[:([38;5;241m-[39m[38;5;28mself[39m[38;5;241m.[39mm[38;5;241m*[39m[38;5;28mself[39m[38;5;241m.[39mtau)]
+
+[0;31mAttributeError[0m: module 'pyleoclim.core' has no attribute 'LipdSeries'
+

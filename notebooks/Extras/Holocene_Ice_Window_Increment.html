@@ -170,20 +170,20 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Analysis</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_1.html">Figure 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_2.html">Figure 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_3.html">Figure 3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_4.html">Figure 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Method_Overview.html">Figure 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/ODP_LERM.html">Figure 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Synthetic_ODP_LERM.html">Figure 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Resolution_Sensitivity.html">Figure 4</a></li>
 
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_5.html">Figure 5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_6.html">Figure 6</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_7.html">Figure 7</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_8.html">Figure 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/IceCore_LERM.html">Figure 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Event_Sensitivity.html">Figure 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Synthetic_Ensembles.html">Figure 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Resolution_Analysis.html">Figure 8</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
 <ul class="current nav bd-sidenav">
@@ -406,6 +406,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/miniconda3/envs/ammonyte/lib/python3.10/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.5&#39; currently installed).
+  from pandas.core import (
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -425,7 +431,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lipd_path</span> <span class="o">=</span> <span class="s1">&#39;./data/8k_ice&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lipd_path</span> <span class="o">=</span> <span class="s1">&#39;../data/8k_ice&#39;</span>
 
 <span class="n">all_files</span> <span class="o">=</span> <span class="n">LiPD</span><span class="p">()</span>
 
@@ -437,7 +443,19 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Directory ./data/8k_ice does not exist
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading 8 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/8 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:00&lt;00:00, 80.45it/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -491,6 +509,139 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 115.05it/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 56.83it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 67.18it/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 80.98it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 75.11it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 88.43it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 113.91it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 85.43it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -515,30 +666,16 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">end_time</span> <span class="o">=</span> <span class="mi">10000</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ms_ice</span> <span class="o">=</span> <span class="n">pyleo</span><span class="o">.</span><span class="n">MultipleSeries</span><span class="p">([</span><span class="n">series</span><span class="o">.</span><span class="n">slice</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="p">))</span> <span class="k">for</span> <span class="n">series</span> <span class="ow">in</span> <span class="n">ms_list</span><span class="p">])</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">ms_ice</span><span class="o">.</span><span class="n">stackplot</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="n">color_list</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">ms_ice</span><span class="o">.</span><span class="n">series_list</span><span class="p">)])</span>
-
-<span class="nn">File ~/miniconda3/envs/ammonyte/lib/python3.10/site-packages/pyleoclim/core/multipleseries.py:1866,</span> in <span class="ni">MultipleSeries.stackplot</span><span class="nt">(self, figsize, savefig_settings, time_unit, xlim, fill_between_alpha, colors, cmap, norm, labels, ylabel_fontsize, spine_lw, grid_lw, label_x_loc, v_shift_factor, linewidth, plot_kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1863</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The length of the label list should match the number of timeseries to be plotted&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1865</span> <span class="c1"># deal with time units</span>
-<span class="ne">-&gt; </span><span class="mi">1866</span> <span class="bp">self</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_time_unit</span><span class="p">(</span><span class="n">time_unit</span><span class="o">=</span><span class="n">time_unit</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1868</span> <span class="c1"># Deal with plotting arguments</span>
-<span class="g g-Whitespace">   </span><span class="mi">1869</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">plot_kwargs</span><span class="p">)</span><span class="o">==</span><span class="nb">dict</span><span class="p">:</span>
-
-<span class="nn">File ~/miniconda3/envs/ammonyte/lib/python3.10/site-packages/pyleoclim/core/multipleseries.py:268,</span> in <span class="ni">MultipleSeries.convert_time_unit</span><span class="nt">(self, time_unit)</span>
-<span class="g g-Whitespace">    </span><span class="mi">266</span>     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_units</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span>         <span class="n">count_units</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">units</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">268</span>     <span class="n">time_unit</span> <span class="o">=</span> <span class="n">unique_units</span><span class="p">[</span><span class="n">count_units</span><span class="o">.</span><span class="n">argmax</span><span class="p">()]</span>                
-<span class="g g-Whitespace">    </span><span class="mi">270</span> <span class="n">new_ms</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span> <span class="n">new_ts_list</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="ne">ValueError</span>: attempt to get argmax of an empty sequence
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 640x480 with 6 Axes&gt;,
+ {0: &lt;Axes: ylabel=&#39;d18O [permil]&#39;&gt;,
+  1: &lt;Axes: ylabel=&#39;bagd18O [permil]&#39;&gt;,
+  2: &lt;Axes: ylabel=&#39;d18O [permil]&#39;&gt;,
+  3: &lt;Axes: ylabel=&#39;d18O [permil]&#39;&gt;,
+  4: &lt;Axes: ylabel=&#39;d18O [permil]&#39;&gt;,
+  &#39;x_axis&#39;: &lt;Axes: xlabel=&#39;Age [Years BP]&#39;&gt;})
 </pre></div>
 </div>
+<img alt="../../_images/a50d28eac887fb7115252774d79506cfb70416d1dfad9c01de460d41f26cf72b.png" src="../../_images/a50d28eac887fb7115252774d79506cfb70416d1dfad9c01de460d41f26cf72b.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -571,111 +708,121 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Analyzing Renland.Johnsen.1992
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/4 [00:00&lt;?, ?it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 25%|██▌       | 1/4 [00:00&lt;00:01,  1.57it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 50%|█████     | 2/4 [00:01&lt;00:01,  1.76it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 75%|███████▌  | 3/4 [00:01&lt;00:00,  2.00it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-100%|██████████| 4/4 [00:01&lt;00:00,  2.12it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/4 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 25%|████████████████████████████████████████████████████                                                                                                                                                            | 1/4 [00:00&lt;00:02,  1.16it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                        | 2/4 [00:01&lt;00:01,  1.50it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 75%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                    | 3/4 [00:01&lt;00:00,  1.83it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02&lt;00:00,  1.97it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02&lt;00:00,  1.78it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Analyzing EPICADomeC.Stenni.2010
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/4 [00:00&lt;?, ?it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 25%|██▌       | 1/4 [00:00&lt;00:01,  1.51it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 50%|█████     | 2/4 [00:01&lt;00:02,  1.03s/it]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 75%|███████▌  | 3/4 [00:02&lt;00:00,  1.02it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-100%|██████████| 4/4 [00:03&lt;00:00,  1.10it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/4 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 25%|████████████████████████████████████████████████████                                                                                                                                                            | 1/4 [00:00&lt;00:02,  1.12it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                        | 2/4 [00:01&lt;00:01,  1.47it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 75%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                    | 3/4 [00:01&lt;00:00,  1.71it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02&lt;00:00,  1.66it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02&lt;00:00,  1.59it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Analyzing GISP2.Grootes.1997
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/4 [00:00&lt;?, ?it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 25%|██▌       | 1/4 [00:01&lt;00:05,  1.76s/it]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 50%|█████     | 2/4 [00:02&lt;00:02,  1.34s/it]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 75%|███████▌  | 3/4 [00:03&lt;00:01,  1.16s/it]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-100%|██████████| 4/4 [00:04&lt;00:00,  1.12s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/4 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 25%|████████████████████████████████████████████████████                                                                                                                                                            | 1/4 [00:01&lt;00:05,  1.94s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                        | 2/4 [00:03&lt;00:02,  1.49s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 75%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                    | 3/4 [00:04&lt;00:01,  1.24s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:04&lt;00:00,  1.06s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:04&lt;00:00,  1.21s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Analyzing GRIP.GRIP.1992
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/4 [00:00&lt;?, ?it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 25%|██▌       | 1/4 [00:04&lt;00:13,  4.51s/it]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 50%|█████     | 2/4 [00:07&lt;00:07,  3.50s/it]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 75%|███████▌  | 3/4 [00:09&lt;00:02,  2.93s/it]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-100%|██████████| 4/4 [00:11&lt;00:00,  2.95s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/4 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 25%|████████████████████████████████████████████████████                                                                                                                                                            | 1/4 [00:04&lt;00:14,  4.97s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                        | 2/4 [00:08&lt;00:07,  3.89s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 75%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                    | 3/4 [00:10&lt;00:03,  3.35s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:13&lt;00:00,  3.13s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:13&lt;00:00,  3.40s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Analyzing NGRIP.NGRIP.2004
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|          | 0/4 [00:00&lt;?, ?it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 25%|██▌       | 1/4 [00:00&lt;00:02,  1.32it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 50%|█████     | 2/4 [00:01&lt;00:01,  1.57it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
- 75%|███████▌  | 3/4 [00:01&lt;00:00,  1.82it/s]/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-100%|██████████| 4/4 [00:02&lt;00:00,  1.91it/s]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/4 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 25%|████████████████████████████████████████████████████                                                                                                                                                            | 1/4 [00:00&lt;00:02,  1.13it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 50%|████████████████████████████████████████████████████████████████████████████████████████████████████████                                                                                                        | 2/4 [00:01&lt;00:01,  1.41it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 75%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████                                                    | 3/4 [00:01&lt;00:00,  1.64it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02&lt;00:00,  1.75it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4/4 [00:02&lt;00:00,  1.62it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -700,13 +847,31 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:08,  2.20s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1it [00:02,  2.42s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2it [00:04,  2.40s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3it [00:07,  2.39s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:09,  2.36s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:09,  2.38s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;Renland.Johnsen.1992&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/8ec69054277a8c72791114f65098bfaeed11404edd727b04f42c5d3082467337.png" src="../../_images/8ec69054277a8c72791114f65098bfaeed11404edd727b04f42c5d3082467337.png" />
+<img alt="../../_images/a83fc875912b5bd7ef3d62145e83cdf39c4b498f80c75c6c0f9f82c20aa691e2.png" src="../../_images/a83fc875912b5bd7ef3d62145e83cdf39c4b498f80c75c6c0f9f82c20aa691e2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -729,13 +894,31 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:08,  2.16s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1it [00:02,  2.33s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2it [00:04,  2.24s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3it [00:06,  2.27s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:09,  2.27s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:09,  2.27s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;EPICADomeC.Stenni.2010&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/9b9105543e7c8e0c438317ee4e1604833223c3ac60c10f6d76c4416106e42dac.png" src="../../_images/9b9105543e7c8e0c438317ee4e1604833223c3ac60c10f6d76c4416106e42dac.png" />
+<img alt="../../_images/e5306b34fb7ce2e1dceda203f5a52b9bac1a8bf9da18ad96131cebfdf9b91079.png" src="../../_images/e5306b34fb7ce2e1dceda203f5a52b9bac1a8bf9da18ad96131cebfdf9b91079.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -758,13 +941,31 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:08,  2.24s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1it [00:02,  2.37s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2it [00:04,  2.39s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3it [00:07,  2.37s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:09,  2.37s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:09,  2.37s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;GISP2.Grootes.1997&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/4f13972f9ccdb006d0c93d2d6f331c060fa94a1aaa6a4c4bee91a36381317f7c.png" src="../../_images/4f13972f9ccdb006d0c93d2d6f331c060fa94a1aaa6a4c4bee91a36381317f7c.png" />
+<img alt="../../_images/6c2911131285132500a8ea6d699b35e74aa497c7568baa01b17573e44d7d1438.png" src="../../_images/6c2911131285132500a8ea6d699b35e74aa497c7568baa01b17573e44d7d1438.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -787,13 +988,31 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:09,  2.45s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1it [00:02,  2.56s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2it [00:05,  2.57s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3it [00:07,  2.56s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:10,  2.57s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:10,  2.57s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;GRIP.GRIP.1992&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/b9b666e73a9fd2baef62f9e776e967136e51e6d95c300217e1d8e49b2abe1520.png" src="../../_images/b9b666e73a9fd2baef62f9e776e967136e51e6d95c300217e1d8e49b2abe1520.png" />
+<img alt="../../_images/d43c76527336fd833e3669ce5dc3f78189afea6f3a6f6ee54535a171fe5707c1.png" src="../../_images/d43c76527336fd833e3669ce5dc3f78189afea6f3a6f6ee54535a171fe5707c1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -816,13 +1035,31 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:08,  2.15s/it]
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0it [00:00, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1it [00:02,  2.19s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2it [00:04,  2.20s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3it [00:06,  2.21s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:08,  2.21s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4it [00:08,  2.21s/it]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 0.98, &#39;NGRIP.NGRIP.2004&#39;)
 </pre></div>
 </div>
-<img alt="../../_images/80b57c9c8b5172e45fbe1e80bb3836b5d9aa87dbba18289032ca9eff6c108eb7.png" src="../../_images/80b57c9c8b5172e45fbe1e80bb3836b5d9aa87dbba18289032ca9eff6c108eb7.png" />
+<img alt="../../_images/06d3afa0eff91b05117b7e4525fd73414ba05008c1a58f7ea2d826c082735107.png" src="../../_images/06d3afa0eff91b05117b7e4525fd73414ba05008c1a58f7ea2d826c082735107.png" />
 </div>
 </div>
 </section>

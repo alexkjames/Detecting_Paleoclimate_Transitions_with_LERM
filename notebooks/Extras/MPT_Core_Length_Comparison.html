@@ -169,20 +169,20 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Analysis</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_1.html">Figure 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_2.html">Figure 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_3.html">Figure 3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_4.html">Figure 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Method_Overview.html">Figure 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/ODP_LERM.html">Figure 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Synthetic_ODP_LERM.html">Figure 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Resolution_Sensitivity.html">Figure 4</a></li>
 
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_5.html">Figure 5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_6.html">Figure 6</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_7.html">Figure 7</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_8.html">Figure 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/IceCore_LERM.html">Figure 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Event_Sensitivity.html">Figure 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Synthetic_Ensembles.html">Figure 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Resolution_Analysis.html">Figure 8</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
 <ul class="current nav bd-sidenav">
@@ -420,6 +420,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/miniconda3/envs/ammonyte/lib/python3.10/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.5&#39; currently installed).
+  from pandas.core import (
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -474,16 +480,16 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
 Initial density is 0.0069
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.4307, Density: 0.0236
-Epsilon: 1.6948, Density: 0.0576
-Epsilon: 1.6948, Density: 0.0576.
+Epsilon: 1.4308, Density: 0.0236
+Epsilon: 1.6948, Density: 0.0581
+Epsilon: 1.6948, Density: 0.0581.
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x2971a88e0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x2b34e2470&gt;
 </pre></div>
 </div>
-<img alt="../../_images/2c0d31696676f5f4cc8f6374dc2c85ae426963caf4fddba7e6fd1e986338962a.png" src="../../_images/2c0d31696676f5f4cc8f6374dc2c85ae426963caf4fddba7e6fd1e986338962a.png" />
-<img alt="../../_images/b8505e3b678bcf87ace88603166fd74a432094d46cc4d5035acb6cc76453eb8b.png" src="../../_images/b8505e3b678bcf87ace88603166fd74a432094d46cc4d5035acb6cc76453eb8b.png" />
+<img alt="../../_images/458e3a55c491c5dc7a0b25ccf116cea5b185442fc650beb6526638a66a2fb0d9.png" src="../../_images/458e3a55c491c5dc7a0b25ccf116cea5b185442fc650beb6526638a66a2fb0d9.png" />
+<img alt="../../_images/5070a3d8e42164b5f5baacbc84c5d81d81d8a5bb014639a814006d4311465bc8.png" src="../../_images/5070a3d8e42164b5f5baacbc84c5d81d81d8a5bb014639a814006d4311465bc8.png" />
 </div>
 </div>
 </section>
@@ -498,7 +504,7 @@ Epsilon: 1.6948, Density: 0.0576.
 <span class="n">color_list</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;colorblind&#39;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">group_names</span><span class="p">:</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/LR04cores_spec_corr/&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">+</span><span class="s1">&#39;_LR04age.txt&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../data/LR04cores_spec_corr/&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">+</span><span class="s1">&#39;_LR04age.txt&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
         <span class="n">lines</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
         <span class="n">time</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">d18O</span> <span class="o">=</span> <span class="p">[]</span>
@@ -527,27 +533,14 @@ Epsilon: 1.6948, Density: 0.0576.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">color_list</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;colorblind&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">group_names</span><span class="p">:</span>
-<span class="ne">----&gt; </span><span class="mi">8</span>     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/LR04cores_spec_corr/&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">+</span><span class="s1">&#39;_LR04age.txt&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span>         <span class="n">lines</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span>         <span class="n">time</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="nn">File ~/miniconda3/envs/ammonyte/lib/python3.10/site-packages/IPython/core/interactiveshell.py:310,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">303</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
-<span class="g g-Whitespace">    </span><span class="mi">304</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">305</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">306</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">307</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">308</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">310</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;./data/LR04cores_spec_corr/925_LR04age.txt&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
+Time axis values sorted in ascending order
+Time axis values sorted in ascending order
+Time axis values sorted in ascending order
+Time axis values sorted in ascending order
 </pre></div>
 </div>
+<img alt="../../_images/c4b89b4e69851e6e36844b3c43687baaea20777f9191495723fca5e9b7ae16c6.png" src="../../_images/c4b89b4e69851e6e36844b3c43687baaea20777f9191495723fca5e9b7ae16c6.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -582,110 +575,70 @@ Epsilon: 1.6948, Density: 0.0576.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2294287704.py:9: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 925 tau is: 7
-Initial density is 0.0181
+Initial density is 0.0183
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.0000, Density: 0.0181
-Epsilon: 1.1593, Density: 0.0496
-Epsilon: 1.1593, Density: 0.0496.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2294287704.py:9: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
+Epsilon: 1.0000, Density: 0.0183
+Epsilon: 1.1584, Density: 0.0499
+Epsilon: 1.1584, Density: 0.0499.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 927 tau is: 4
-Initial density is 0.0227
+Initial density is 0.0241
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.0000, Density: 0.0227
-Epsilon: 1.1363, Density: 0.0507
-Epsilon: 1.1363, Density: 0.0507.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2294287704.py:9: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
+Epsilon: 1.0000, Density: 0.0241
+Epsilon: 1.1297, Density: 0.0511
+Epsilon: 1.1297, Density: 0.0511.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 929 tau is: 5
-Initial density is 0.0259
+Initial density is 0.0263
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.0000, Density: 0.0259
-Epsilon: 1.1206, Density: 0.0544
-Epsilon: 1.1206, Density: 0.0544.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2294287704.py:9: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
+Epsilon: 1.0000, Density: 0.0263
+Epsilon: 1.1186, Density: 0.0547
+Epsilon: 1.1186, Density: 0.0547.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 846 tau is: 8
-Initial density is 0.1027
+Initial density is 0.1042
 Initial density is not within the tolerance window, searching...
-Epsilon: 0.4731, Density: 0.0017
-Epsilon: 0.9560, Density: 0.0772
-Epsilon: 0.9560, Density: 0.0772
-Epsilon: 0.8198, Density: 0.0268
-Epsilon: 0.8198, Density: 0.0268
-Epsilon: 0.9358, Density: 0.0670
-Epsilon: 0.9358, Density: 0.0670
-Epsilon: 0.8509, Density: 0.0348
-Epsilon: 0.8509, Density: 0.0348
-Epsilon: 0.9268, Density: 0.0628
-Epsilon: 0.9268, Density: 0.0628
-Epsilon: 0.8627, Density: 0.0384
-Epsilon: 0.8627, Density: 0.0384
-Epsilon: 0.9209, Density: 0.0602
-Epsilon: 0.9209, Density: 0.0602
-Epsilon: 0.8697, Density: 0.0406
-Epsilon: 0.8697, Density: 0.0406.
+Epsilon: 0.4575, Density: 0.0016
+Epsilon: 0.9417, Density: 0.0709
+Epsilon: 0.9417, Density: 0.0709
+Epsilon: 0.8373, Density: 0.0315
+Epsilon: 0.8373, Density: 0.0315
+Epsilon: 0.9300, Density: 0.0652
+Epsilon: 0.9300, Density: 0.0652
+Epsilon: 0.8537, Density: 0.0361
+Epsilon: 0.8537, Density: 0.0361
+Epsilon: 0.9234, Density: 0.0622
+Epsilon: 0.9234, Density: 0.0622
+Epsilon: 0.8625, Density: 0.0388
+Epsilon: 0.8625, Density: 0.0388
+Epsilon: 0.9185, Density: 0.0601
+Epsilon: 0.9185, Density: 0.0601
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2294287704.py:9: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Epsilon: 0.8681, Density: 0.0406
+Epsilon: 0.8681, Density: 0.0406.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 849 tau is: 5
-Initial density is 0.0936
+Initial density is 0.0964
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.0000, Density: 0.0936
-Epsilon: 0.7818, Density: 0.0166
-Epsilon: 0.7818, Density: 0.0166
-Epsilon: 0.9487, Density: 0.0661
-Epsilon: 0.9487, Density: 0.0661
-Epsilon: 0.8681, Density: 0.0357
-Epsilon: 0.8681, Density: 0.0357
-Epsilon: 0.9397, Density: 0.0620
-Epsilon: 0.9397, Density: 0.0620
-Epsilon: 0.8799, Density: 0.0392
-Epsilon: 0.8799, Density: 0.0392
-Epsilon: 0.9337, Density: 0.0593
-Epsilon: 0.9337, Density: 0.0593.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+Epsilon: 1.0000, Density: 0.0964
+Epsilon: 0.7679, Density: 0.0149
+Epsilon: 0.7679, Density: 0.0149
+Epsilon: 0.9433, Density: 0.0654
+Epsilon: 0.9433, Density: 0.0654
+Epsilon: 0.8663, Density: 0.0362
+Epsilon: 0.8663, Density: 0.0362
+Epsilon: 0.9354, Density: 0.0618
+Epsilon: 0.9354, Density: 0.0618
+Epsilon: 0.8763, Density: 0.0392
+Epsilon: 0.8763, Density: 0.0392
+Epsilon: 0.9302, Density: 0.0594
+Epsilon: 0.9302, Density: 0.0594.
 </pre></div>
 </div>
 </div>
@@ -752,7 +705,7 @@ Epsilon: 0.9337, Density: 0.0593.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/8f51b7c56461bc68831c5eaeff70d92af6fa2ee5f08b9af8026a43e1391e52c8.png" src="../../_images/8f51b7c56461bc68831c5eaeff70d92af6fa2ee5f08b9af8026a43e1391e52c8.png" />
+<img alt="../../_images/5675398d49ce0de442b0abb668ea5aa88ed5c9453d00caad48037106901e398b.png" src="../../_images/5675398d49ce0de442b0abb668ea5aa88ed5c9453d00caad48037106901e398b.png" />
 </div>
 </div>
 </section>
@@ -767,7 +720,7 @@ Epsilon: 0.9337, Density: 0.0593.
 <span class="n">color_list</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s1">&#39;colorblind&#39;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">group_names</span><span class="p">:</span>
-    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;./data/LR04cores_spec_corr/&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">+</span><span class="s1">&#39;_LR04age.txt&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;../data/LR04cores_spec_corr/&#39;</span><span class="o">+</span><span class="n">name</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span><span class="o">+</span><span class="s1">&#39;_LR04age.txt&#39;</span><span class="p">,</span><span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
         <span class="n">lines</span> <span class="o">=</span> <span class="n">handle</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
         <span class="n">time</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="n">d18O</span> <span class="o">=</span> <span class="p">[]</span>
@@ -796,10 +749,6 @@ Epsilon: 0.9337, Density: 0.0593.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/3486955320.py:19: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  series = pyleo.Series(value=d18O,
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
 Time axis values sorted in ascending order
 Time axis values sorted in ascending order
@@ -807,7 +756,7 @@ Time axis values sorted in ascending order
 Time axis values sorted in ascending order
 </pre></div>
 </div>
-<img alt="../../_images/5b1b8033a2c3fcc18fe5b97d3176b1a2fa74786cf5350a91031764e59aa48642.png" src="../../_images/5b1b8033a2c3fcc18fe5b97d3176b1a2fa74786cf5350a91031764e59aa48642.png" />
+<img alt="../../_images/bae19a29a2139c4b4eb78afdbc0b51cdaf8f2cb2ff76b309260fa64e1ca34301.png" src="../../_images/bae19a29a2139c4b4eb78afdbc0b51cdaf8f2cb2ff76b309260fa64e1ca34301.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -842,87 +791,45 @@ Time axis values sorted in ascending order
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2294287704.py:9: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 925 tau is: 7
-Initial density is 0.0094
+Initial density is 0.0097
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.4062, Density: 0.0689
-Epsilon: 1.4062, Density: 0.0689
-Epsilon: 1.3119, Density: 0.0444
-Epsilon: 1.3119, Density: 0.0444.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2294287704.py:9: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
+Epsilon: 1.4033, Density: 0.0698
+Epsilon: 1.4033, Density: 0.0698
+Epsilon: 1.3044, Density: 0.0442
+Epsilon: 1.3044, Density: 0.0442.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 927 tau is: 4
 Initial density is 0.0082
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.4181, Density: 0.0582
-Epsilon: 1.4181, Density: 0.0582.
+Epsilon: 1.4179, Density: 0.0587
+Epsilon: 1.4179, Density: 0.0587.
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2294287704.py:9: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 929 tau is: 5
-Initial density is 0.0136
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 929 tau is: 6
+Initial density is 0.0138
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.3641, Density: 0.0704
-Epsilon: 1.3641, Density: 0.0704
-Epsilon: 1.2624, Density: 0.0447
-Epsilon: 1.2624, Density: 0.0447.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2294287704.py:9: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
+Epsilon: 1.3616, Density: 0.0716
+Epsilon: 1.3616, Density: 0.0716
+Epsilon: 1.2536, Density: 0.0445
+Epsilon: 1.2536, Density: 0.0445.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 846 tau is: 6
-Initial density is 0.0306
+Initial density is 0.0314
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.0000, Density: 0.0306
-Epsilon: 1.0969, Density: 0.0533
-Epsilon: 1.0969, Density: 0.0533.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_27044/2294287704.py:9: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = ammo.Series(
+Epsilon: 1.0000, Density: 0.0314
+Epsilon: 1.0929, Density: 0.0535
+Epsilon: 1.0929, Density: 0.0535.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ODP 849 tau is: 4
-Initial density is 0.0302
+Initial density is 0.0307
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.0000, Density: 0.0302
-Epsilon: 1.0991, Density: 0.0525
-Epsilon: 1.0991, Density: 0.0525.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+Epsilon: 1.0000, Density: 0.0307
+Epsilon: 1.0966, Density: 0.0528
+Epsilon: 1.0966, Density: 0.0528.
 </pre></div>
 </div>
 </div>
@@ -989,7 +896,7 @@ Epsilon: 1.0991, Density: 0.0525.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/a0a0677fff8d58f7320fe6332212b1f70642f4bfe921111b4a161d50854f6e1c.png" src="../../_images/a0a0677fff8d58f7320fe6332212b1f70642f4bfe921111b4a161d50854f6e1c.png" />
+<img alt="../../_images/da2217a06b6461d550507a563f8d7c5bc130abced9cc4661bc0d66a9d1b27849.png" src="../../_images/da2217a06b6461d550507a563f8d7c5bc130abced9cc4661bc0d66a9d1b27849.png" />
 </div>
 </div>
 </section>

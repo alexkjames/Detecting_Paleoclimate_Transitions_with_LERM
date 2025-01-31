@@ -66,7 +66,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Holocene Ice Window Increment" href="Holocene_Ice_Window_Increment.html" />
-    <link rel="prev" title="Figure 8" href="../Figures/Figure_8.html" />
+    <link rel="prev" title="Figure 8" href="../Main_Analysis/Resolution_Analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -170,20 +170,20 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Figures</span></p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Main Analysis</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_1.html">Figure 1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_2.html">Figure 2</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_3.html">Figure 3</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_4.html">Figure 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Method_Overview.html">Figure 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/ODP_LERM.html">Figure 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Synthetic_ODP_LERM.html">Figure 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Resolution_Sensitivity.html">Figure 4</a></li>
 
 
 
 
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_5.html">Figure 5</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_6.html">Figure 6</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_7.html">Figure 7</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../Figures/Figure_8.html">Figure 8</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/IceCore_LERM.html">Figure 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Event_Sensitivity.html">Figure 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Synthetic_Ensembles.html">Figure 7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Main_Analysis/Resolution_Analysis.html">Figure 8</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Extras</span></p>
 <ul class="current nav bd-sidenav">
@@ -420,6 +420,12 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/miniconda3/envs/ammonyte/lib/python3.10/site-packages/pandas/core/arrays/masked.py:60: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.5&#39; currently installed).
+  from pandas.core import (
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -432,7 +438,7 @@ document.write(`
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lipd_path</span> <span class="o">=</span> <span class="s1">&#39;./data/8k_ice&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lipd_path</span> <span class="o">=</span> <span class="s1">&#39;../data/8k_ice&#39;</span>
 
 <span class="n">all_files</span> <span class="o">=</span> <span class="n">LiPD</span><span class="p">()</span>
 
@@ -444,7 +450,22 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Directory ./data/8k_ice does not exist
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading 8 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/8 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:00&lt;00:00, 78.67it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 8/8 [00:00&lt;00:00, 78.30it/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -498,6 +519,137 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 124.06it/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 59.89it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 75.68it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 84.57it/s]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 84.62it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 93.03it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 121.90it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Time axis values sorted in ascending order
+Loading 1 LiPD files
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  0%|                                                                                                                                                                                                                        | 0/1 [00:00&lt;?, ?it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00&lt;00:00, 101.34it/s]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Loaded..
+NaNs have been detected and dropped.
+Time axis values sorted in ascending order
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -539,29 +691,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">greenland_ms</span> <span class="o">=</span> <span class="n">pyleo</span><span class="o">.</span><span class="n">MultipleSeries</span><span class="p">([</span><span class="n">series</span><span class="o">.</span><span class="n">slice</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span><span class="n">end_time</span><span class="p">))</span> <span class="k">for</span> <span class="n">series</span> <span class="ow">in</span> <span class="n">greenland_ms_list</span><span class="p">])</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">greenland_ms</span><span class="o">.</span><span class="n">stackplot</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="n">color_list</span><span class="p">[:</span><span class="nb">len</span><span class="p">(</span><span class="n">greenland_ms</span><span class="o">.</span><span class="n">series_list</span><span class="p">)])</span>
-
-<span class="nn">File ~/miniconda3/envs/ammonyte/lib/python3.10/site-packages/pyleoclim/core/multipleseries.py:1866,</span> in <span class="ni">MultipleSeries.stackplot</span><span class="nt">(self, figsize, savefig_settings, time_unit, xlim, fill_between_alpha, colors, cmap, norm, labels, ylabel_fontsize, spine_lw, grid_lw, label_x_loc, v_shift_factor, linewidth, plot_kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1863</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;The length of the label list should match the number of timeseries to be plotted&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1865</span> <span class="c1"># deal with time units</span>
-<span class="ne">-&gt; </span><span class="mi">1866</span> <span class="bp">self</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">convert_time_unit</span><span class="p">(</span><span class="n">time_unit</span><span class="o">=</span><span class="n">time_unit</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1868</span> <span class="c1"># Deal with plotting arguments</span>
-<span class="g g-Whitespace">   </span><span class="mi">1869</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">plot_kwargs</span><span class="p">)</span><span class="o">==</span><span class="nb">dict</span><span class="p">:</span>
-
-<span class="nn">File ~/miniconda3/envs/ammonyte/lib/python3.10/site-packages/pyleoclim/core/multipleseries.py:268,</span> in <span class="ni">MultipleSeries.convert_time_unit</span><span class="nt">(self, time_unit)</span>
-<span class="g g-Whitespace">    </span><span class="mi">266</span>     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">u</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_units</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">267</span>         <span class="n">count_units</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">units</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">u</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">268</span>     <span class="n">time_unit</span> <span class="o">=</span> <span class="n">unique_units</span><span class="p">[</span><span class="n">count_units</span><span class="o">.</span><span class="n">argmax</span><span class="p">()]</span>                
-<span class="g g-Whitespace">    </span><span class="mi">270</span> <span class="n">new_ms</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">271</span> <span class="n">new_ts_list</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="ne">ValueError</span>: attempt to get argmax of an empty sequence
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 640x480 with 5 Axes&gt;,
+ {0: &lt;Axes: ylabel=&#39;d18O [permil]&#39;&gt;,
+  1: &lt;Axes: ylabel=&#39;d18O [permil]&#39;&gt;,
+  2: &lt;Axes: ylabel=&#39;d18O [permil]&#39;&gt;,
+  3: &lt;Axes: ylabel=&#39;d18O [permil]&#39;&gt;,
+  &#39;x_axis&#39;: &lt;Axes: xlabel=&#39;Age [Years BP]&#39;&gt;})
 </pre></div>
 </div>
+<img alt="../../_images/8ab9d74bf458ec5b5d855f6b5732478cfafe2bd3b6db8dc9b1c694a52442ca74.png" src="../../_images/8ab9d74bf458ec5b5d855f6b5732478cfafe2bd3b6db8dc9b1c694a52442ca74.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -592,70 +730,38 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_15775/2384839309.py:6: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = amt.Series(
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Renland.Johnsen.1992 tau is: 4
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Renland.Johnsen.1992 tau is: 4
-Initial density is 0.0155
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial density is 0.0155
 Initial density is not within the tolerance window, searching...
 Epsilon: 1.0000, Density: 0.0155
-Epsilon: 1.1726, Density: 0.0436
-Epsilon: 1.1726, Density: 0.0436.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_15775/2384839309.py:6: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = amt.Series(
+Epsilon: 1.1727, Density: 0.0436
+Epsilon: 1.1727, Density: 0.0436.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GISP2.Grootes.1997 tau is: 4
-Initial density is 0.0149
+Initial density is 0.0129
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.0000, Density: 0.0149
-Epsilon: 1.1756, Density: 0.0482
-Epsilon: 1.1756, Density: 0.0482.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_15775/2384839309.py:6: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = amt.Series(
+Epsilon: 1.0000, Density: 0.0129
+Epsilon: 1.1856, Density: 0.0472
+Epsilon: 1.1856, Density: 0.0472.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>GRIP.GRIP.1992 tau is: 4
 Initial density is 0.0180
 Initial density is not within the tolerance window, searching...
 Epsilon: 1.0000, Density: 0.0180
-Epsilon: 1.1598, Density: 0.0583
-Epsilon: 1.1598, Density: 0.0583.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_15775/2384839309.py:6: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = amt.Series(
+Epsilon: 1.1601, Density: 0.0583
+Epsilon: 1.1601, Density: 0.0583.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>NGRIP.NGRIP.2004 tau is: 4
-Initial density is 0.0115
+Initial density is 0.0116
 Initial density is not within the tolerance window, searching...
-Epsilon: 1.0000, Density: 0.0115
-Epsilon: 1.1923, Density: 0.0406
-Epsilon: 1.1923, Density: 0.0406.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+Epsilon: 1.0000, Density: 0.0116
+Epsilon: 1.1918, Density: 0.0408
+Epsilon: 1.1918, Density: 0.0408.
 </pre></div>
 </div>
 </div>
@@ -711,7 +817,7 @@ Epsilon: 1.1923, Density: 0.0406.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/42dfe3570b123f5e4973494eef2e02a8cff6544984e23d2c6e798d4c496a5b16.png" src="../../_images/42dfe3570b123f5e4973494eef2e02a8cff6544984e23d2c6e798d4c496a5b16.png" />
+<img alt="../../_images/957e3e096949830d2655614fbbcbfc08f04b0b720d028bf090230d9e87cbca88.png" src="../../_images/957e3e096949830d2655614fbbcbfc08f04b0b720d028bf090230d9e87cbca88.png" />
 </div>
 </div>
 <p>Antarctica analysis</p>
@@ -728,10 +834,10 @@ Epsilon: 1.1923, Density: 0.0406.
   1: &lt;Axes: ylabel=&#39;bagd18O [permil]&#39;&gt;,
   2: &lt;Axes: ylabel=&#39;temperature [degC]&#39;&gt;,
   3: &lt;Axes: ylabel=&#39;d18O [permil]&#39;&gt;,
-  4: &lt;Axes: xlabel=&#39;Age [Years BP]&#39;&gt;})
+  &#39;x_axis&#39;: &lt;Axes: xlabel=&#39;Age [Years BP]&#39;&gt;})
 </pre></div>
 </div>
-<img alt="../../_images/beadecb587f302be3cd36859d159ea4c67533baaa97668b2d962d276230acf09.png" src="../../_images/beadecb587f302be3cd36859d159ea4c67533baaa97668b2d962d276230acf09.png" />
+<img alt="../../_images/72b78e0024fc135e181f57afb3f22b0aaf6892469f4529414367b592e8ab2f38.png" src="../../_images/72b78e0024fc135e181f57afb3f22b0aaf6892469f4529414367b592e8ab2f38.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -769,39 +875,19 @@ Epsilon: 1.1923, Density: 0.0406.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_15775/3419447091.py:13: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = amt.Series(
-</pre></div>
-</div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>EDML.Stenni.2010 tau is: 3
-Initial density is 0.0335
+Initial density is 0.0338
 Initial density is not within the tolerance window, searching...
-Epsilon: 2.3646, Density: 0.0569
-Epsilon: 2.3646, Density: 0.0569.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_15775/3419447091.py:13: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = amt.Series(
+Epsilon: 2.3619, Density: 0.0569
+Epsilon: 2.3619, Density: 0.0569.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>EPICADomeC.Stenni.2010 tau is: 3
 Initial density is 0.0624
 Initial density is not within the tolerance window, searching...
-Epsilon: 2.0761, Density: 0.0399
-Epsilon: 2.1772, Density: 0.0581
-Epsilon: 2.1772, Density: 0.0581.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_15775/3419447091.py:13: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = amt.Series(
+Epsilon: 2.0758, Density: 0.0396
+Epsilon: 2.1796, Density: 0.0586
+Epsilon: 2.1796, Density: 0.0586.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Vostok.Vimeux.2002 tau is: 3
@@ -810,29 +896,15 @@ Initial density is not within the tolerance window, searching...
 Epsilon: 0.5000, Density: 0.0022
 Epsilon: 0.9781, Density: 0.0025
 Epsilon: 1.4534, Density: 0.0116
-Epsilon: 1.8375, Density: 0.0542
-Epsilon: 1.8375, Density: 0.0542.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/var/folders/5k/0y4jsz592qq0y78c_0ddgcpm0000gn/T/ipykernel_15775/3419447091.py:13: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  amt_series = amt.Series(
+Epsilon: 1.8374, Density: 0.0544
+Epsilon: 1.8374, Density: 0.0544.
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TALDICE.Mezgec.2017 tau is: 3
 Initial density is 0.0239
 Initial density is not within the tolerance window, searching...
-Epsilon: 2.4613, Density: 0.0546
-Epsilon: 2.4613, Density: 0.0546.
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: auto_time_params is not specified. Currently default behavior sets this to True. In a future release this will be changed to False.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
-/Users/alexjames/Documents/GitHub/Ammonyte/ammonyte/core/rqa_res.py:22: UserWarning: No time_name parameter provided. Assuming &quot;Time&quot;.
-  super().__init__(time,value,time_name,time_unit,value_name,value_unit,label,sort_ts=None)
+Epsilon: 2.4612, Density: 0.0550
+Epsilon: 2.4612, Density: 0.0550.
 </pre></div>
 </div>
 </div>
@@ -888,7 +960,7 @@ Epsilon: 2.4613, Density: 0.0546.
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/f51bdfdfe43e9c0bca3da8e891195d59fdc09efc193d9bf9f78f665212894668.png" src="../../_images/f51bdfdfe43e9c0bca3da8e891195d59fdc09efc193d9bf9f78f665212894668.png" />
+<img alt="../../_images/f85edfeae7c76bb989be2372019d60bc6abe19bb231ad4c0a3d68aa86c6ec85d.png" src="../../_images/f85edfeae7c76bb989be2372019d60bc6abe19bb231ad4c0a3d68aa86c6ec85d.png" />
 </div>
 </div>
 </section>
@@ -925,7 +997,7 @@ Epsilon: 2.4613, Density: 0.0546.
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Figures/Figure_8.html"
+       href="../Main_Analysis/Resolution_Analysis.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
